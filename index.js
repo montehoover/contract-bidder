@@ -19,11 +19,13 @@ app.use(session({
 app.use(flash());
 
 
+app.use('/', require('./controllers/ctrl.js'));
 app.use('/tweets', require('./controllers/tweet.js'));
 
-app.get('/', function(req, res) {
-  res.render('index');
-});
+
+// app.get('/', function(req, res) {
+//   res.render('index');
+// });
 
 app.get('/auth/signup', function(req, res) {
   res.render('signup', {alerts: req.flash()});
@@ -51,9 +53,8 @@ app.post('/auth/signup', function(req, res) {
   });
 });
 
-app.get('/tweet')
 
-var port = 3000;
+var port = process.env.PORT || 3000;
 app.listen(port, function() {
   console.log("You're listening to the smooth sounds of port " + port);
 });

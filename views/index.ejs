@@ -5,3 +5,17 @@
     And remember, 1 + 1 = <%= 1 + 1 %>
   </div>
 </div>
+<div class="row">
+  <div class="col-xs-12">
+    <% projects.forEach(function(project) { %>
+      <a href="#"><h3><%= project.name %></h3></a>
+      <p><%= project.description %></p>
+      <h5>Available Trade Projects:</h5>
+      <ul>
+      <% project.subprojects.forEach(function(subproject) { %>
+        <li><a href="#"><%= subproject.category %></a> <%= subproject.description %></li>
+      <% }); %>
+      </ul>
+    <% }); %>
+  </div>
+</div>
