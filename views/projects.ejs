@@ -8,7 +8,7 @@
       <h5>Available Trade Projects:</h5>
       <ul>
       <% project.subprojects.forEach(function(subproject) { %>
-        <li><a href="/projects/subproject.id"><%= subproject.category %></a> <%= subproject.description %></li>
+        <li><a href="/projects/<%= subproject.id %>"><%= subproject.category %></a> <%= subproject.description %></li>
       <% }); %>
       </ul>
     <% }); %>

@@ -47,10 +47,33 @@ router.get('/projects/:subprojectid', function(req, res) {
     },
     include: [db.project]
   }).then(function(subproject) {
+    console.log("********* found:", subproject)
     res.render('showproject', {subproject: subproject});
   });
 });
 
+
+router.post('/projects/:subprojectid/bid', function(req, res) {
+    db.subproject.findOne({
+    where: {
+      id: req.params.subprojectid
+    }
+  }).then(function(subproject) {
+    db.subcontractor.findOne({
+      where: {
+        license: req.body.license
+      }
+    }).then(function(subcontractor) {
+      subproject.createBid({
+        amount: req.body.amount,
+        subcontractorId: subcontractor.id,
+        notes: req.body.notes
+      }).then(function(bid) {
+        res.render();
+      });
+    });
+  });
+});
 
 router.get('/projects/:subprojectid/bid', function(req, res) {
     db.subproject.findOne({
