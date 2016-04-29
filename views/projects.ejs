@@ -1,0 +1,19 @@
+<h1>Available Projects:</h1>
+<br>
+<div class="row">
+  <div class="col-xs-12 white">
+    <% projects.forEach(function(project) { %>
+      <a href="#"><h3><%= project.name %></h3></a>
+      <p><%= project.description %></p>
+      <h5>Available Trade Projects:</h5>
+      <ul>
+      <% project.subprojects.forEach(function(subproject) { %>
+        <li><a href="/projects/subproject.id"><%= subproject.category %></a> <%= subproject.description %></li>
+      <% }); %>
+      </ul>
+    <% }); %>
+    <form method="GET" action="/projects/new">
+      <button type="submit" class="btn btn-default">New Project</button>
+    </form>
+  </div>
+</div>

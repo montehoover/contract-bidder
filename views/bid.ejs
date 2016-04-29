@@ -1,0 +1,16 @@
+<div class="row">
+  <div class="col-xs-12">
+    <h3>Submit your bid:</h3>
+    <form method="POST" action="/projects/new">
+      <div class="form-group">
+        <input name="company" type="text" class="form-control" placeholder="Your company">Company Name:</input>
+        <input name="license" type="text" class="form-control" placeholder="Your license number for state the work is in">License Number:</input>
+        <input name="firstname" type="text" class="form-control" placeholder="Point of contact at your company">Contact Name:</input>
+        <input name="amount" type="text" class="form-control" placeholder="Your bid for this work request">Bid Amount:</input>
+        <label for="notes">Notes:</label>
+        <textarea name="notes" class="form-control" rows="2" id="notes" placeholder="Any notes you want to add about your bid"></textarea>
+      </div>
+      <button type="submit" class="btn btn-default">Submit</button>
+    </form>
+  </div>
+</div>

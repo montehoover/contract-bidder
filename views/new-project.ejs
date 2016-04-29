@@ -1,0 +1,26 @@
+<div class="row">
+  <div class="col-xs-12 white">
+    <h3>List a new project:</h3>
+    <form method="POST" action="/projects/new">
+      <div class="form-group">
+        Name:
+        <input name="name" type="text" class="form-control" placeholder="Name of the project">
+        <br>
+        <label for="description">Description:</label>
+        <textarea name="description" class="form-control" rows="5" id="description" placeholder="Description of the project"></textarea>
+        <br>
+        Select all that apply:
+        <label class="checkbox-inline"><input type="checkbox" value="">Multi-unit</label>
+        <label class="checkbox-inline"><input type="checkbox" value="">Multi-story</label>
+        <label class="checkbox-inline"><input type="checkbox" value="">Urban</label>
+        <label class="checkbox-inline"><input type="checkbox" value="">Suburban</label>
+        <label class="checkbox-inline"><input type="checkbox" value="">Non-building</label>
+      </div>
+      <div id="subprojects-div" class="form-group">
+      </div>
+      <button type="button" id="add-subproject-btn" class="btn btn-success">+</button> Add a Trade Work Request
+      <br>
+      <button type="submit" id="add-project-btn" class="btn btn-primary">Submit</button>
+    </form>
+  </div>
+</div>

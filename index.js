@@ -20,7 +20,6 @@ app.use(flash());
 
 
 app.use('/', require('./controllers/ctrl.js'));
-app.use('/tweets', require('./controllers/tweet.js'));
 
 
 // app.get('/', function(req, res) {

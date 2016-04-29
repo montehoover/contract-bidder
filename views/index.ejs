@@ -1,21 +1,29 @@
-<h1>Welcome to Contract Bidder</h1>
+<!-- <h1>Welcome to Contract Bidder</h1>
 <div class="row">
   <div class="col-xs-12">
     <a href="/auth/signup">Sign up</a> for an account, log in, or simply browse the firehose.
     And remember, 1 + 1 = <%= 1 + 1 %>
   </div>
-</div>
+</div> -->
+
 <div class="row">
-  <div class="col-xs-12">
-    <% projects.forEach(function(project) { %>
-      <a href="#"><h3><%= project.name %></h3></a>
-      <p><%= project.description %></p>
-      <h5>Available Trade Projects:</h5>
-      <ul>
-      <% project.subprojects.forEach(function(subproject) { %>
-        <li><a href="#"><%= subproject.category %></a> <%= subproject.description %></li>
-      <% }); %>
-      </ul>
-    <% }); %>
-  </div>
+    <div class="col-lg-12">
+        <div class="intro-message">
+            <h1>Contract Bidder</h1>
+            <h3>The place where General Contractors, Subcontractors, and Suppliers meet.</h3>
+            <hr class="intro-divider">
+            <ul class="list-inline intro-social-buttons">
+                <li>
+                    <a href="/projects" class="btn btn-default btn-lg"><!-- <i class="fa fa-github fa-fw"></i> --> <span class="network-name">View Projects</span></a>
+                </li>
+                <li>
+                    <a href="/projects/new" class="btn btn-default btn-lg"><!-- <i class="fa fa-github fa-fw"></i>  --><span class="network-name">List A Project</span></a>
+                </li>
+            </ul>
+        </div>
+    </div>
 </div>
+
+
+
+
